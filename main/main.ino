@@ -1,4 +1,5 @@
 // v1.0.0 rewrote the entire code
+// UPLOAD INFO: set Flashsize to 4M (1M SPIFFS) and check in serial if the system Mounts
 #include <FS.h>                   //this needs to be first, or it all crashes and burns...
 
 #include <ESP8266WiFi.h>          //https://github.com/esp8266/Arduino
@@ -65,6 +66,9 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(BAUD);
   Serial.println();
+  Serial.println(F("MODELLHAUSSTEUERUNG V1.0.0"));
+  Serial.println(F("Made by Johannes Röring"));
+  Serial.println(F("https://github.com/Joro28062002/BLYNK_MODELHOUSE"));
 
   //clean FS, for testing
   //SPIFFS.format();
